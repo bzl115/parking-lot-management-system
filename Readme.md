@@ -4,16 +4,12 @@ The **Parking Lot Management System** is a Java-based project developed to strea
 It allows administrators to manage parking slots, record vehicle entries and exits, and monitor parking activity efficiently.  
 All data is stored in a connected MySQL database, ensuring accurate and reliable record-keeping and fee calculation.
 
-```
-
 ## Course Project done by
 
-BASIL PETER  
-RAMKIRAN R  
-RISHABH P.S.  
-ROHAN ANOOP  
-
-```
+BASIL PETER
+RAMKIRAN R
+RISHABH P.S.
+ROHAN ANOOP
 
 ## 📋 Features
 
@@ -24,31 +20,27 @@ ROHAN ANOOP
 - 🧩 **Modular Code Structure** — Separated logic for database, UI, and main operations.  
 - ⚡ **Responsive UI** — Simple and fast interface using Java Swing (or JavaFX, if used).
 
-```
-
 ## 🏗️ Project Structure
 
-PLMS/  
-├── .vscode/  
-│ └── settings.json  
-│    
-├── lib/  
-│ └── mysql-connector-j-9.4.0.jar    
-│  
-├── .gitignore  
-├── config.properties  
-├── Admin.java  
-├── DatabaseConnection.java  
-├── Main.java  
-├── MainUI.java  
-├── ParkingFunctions.java  
-├── ParkingManager.java  
-├── ParkingRecord.java  
-├── ParkingSlot.java   
-├── Vehicle.java  
-└── Readme.md  
-
-```
+PLMS/
+├── .vscode/
+│ └── settings.json
+│
+├── lib/
+│ └── mysql-connector-j-9.4.0.jar
+│
+├── .gitignore
+├── config.properties
+├── Admin.java
+├── DatabaseConnection.java
+├── Main.java
+├── MainUI.java
+├── ParkingFunctions.java
+├── ParkingManager.java
+├── ParkingRecord.java
+├── ParkingSlot.java
+├── Vehicle.java
+└── Readme.md
 
 📦 Requirements
 
@@ -56,8 +48,6 @@ Java JDK 17+
 MySQL 8.0+
 MySQL Connector/J
 (Optional) VS Code or IntelliJ IDEA
-
-```
 
 🪄 1. Clone the Repository
 git clone <https://github.com/bzl115/paring-lot-management-system.git>
@@ -73,30 +63,30 @@ Log in as root:
 
 mysql -u root -p
 
-Create the database:  
+Create the database:
 
-CREATE DATABASE parkingdb;  
+CREATE DATABASE parkingdb;
 USE parkingdb;
 
-Create a dedicated user for this project:  
+Create a dedicated user for this project:
 
-CREATE USER 'parking_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';  
-GRANT ALL PRIVILEGES ON parkingdb.* TO 'parking_user'@'localhost';  
+CREATE USER 'parking_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+GRANT ALL PRIVILEGES ON parkingdb.* TO 'parking_user'@'localhost';
 FLUSH PRIVILEGES;
 
-🧱 3. Create Required Table(s)  
+🧱 3. Create Required Table(s)
 
-Run this inside MySQL:  
+Run this inside MySQL:
 
-CREATE TABLE parking_records (  
-    record_id INT AUTO_INCREMENT PRIMARY KEY,    
-    owner_name VARCHAR(100) NOT NULL,    
-    vehicle_number VARCHAR(50) NOT NULL,  
-    slot_number INT NOT NULL,  
-    entry_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
-    exit_time TIMESTAMP NULL,  
-    fee DECIMAL(10,2) DEFAULT 0.00  
-);  
+CREATE TABLE parking_records (
+    record_id INT AUTO_INCREMENT PRIMARY KEY,
+    owner_name VARCHAR(100) NOT NULL,
+    vehicle_number VARCHAR(50) NOT NULL,
+    slot_number INT NOT NULL,
+    entry_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    exit_time TIMESTAMP NULL,
+    fee DECIMAL(10,2) DEFAULT 0.00
+);
 
 🔗 4. Add MySQL Connector (JDBC Driver)
 
@@ -126,8 +116,6 @@ ADMIN_ID=your_admin_here
 ADMIN_PASS=your_admin_password_here
 
 🧩 6. Run the Application
-
-```
 
 Now you can compile and run the project:
 

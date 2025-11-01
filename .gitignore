@@ -1,0 +1,17 @@
+# ==============================
+# Java Parking Management System
+# ==============================
+
+# --- Build and class files ---
+**/*.class
+**/bin/
+
+# --- Package files ---
+*.jar
+*.war
+
+# --- VS Code
+.vscode/
+
+# --- Environment & credentials ---
+.env

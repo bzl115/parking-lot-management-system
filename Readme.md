@@ -101,25 +101,25 @@ Add it to your classpath
 if using VS Code, ensure it’s added as a referenced library
 open settings.json and modify
 
-  "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ]
+  "java.project.referencedLibraries": [  
+        "lib/**/*.jar"  
+    ]  
 
 ⚙️ 5. Configure Database & Admin Credentials
 
 modify the file config.properties
 
-DB_URL=jdbc:mysql://localhost:3306/parkingdb
-DB_USER=your_username_here
-DB_PASS=your_password_here
-ADMIN_ID=your_admin_here
-ADMIN_PASS=your_admin_password_here
+DB_URL=jdbc:mysql://localhost:3306/parkingdb  
+DB_USER=your_username_here  
+DB_PASS=your_password_here  
+ADMIN_ID=your_admin_here  
+ADMIN_PASS=your_admin_password_here  
 
 🧩 6. Run the Application
 
 Now you can compile and run the project:
 
-javac -cp ".;path_to_jar_file\mysql-connector-j-9.4.0.jar" *.java
+javac -cp ".;path_to_jar_file\mysql-connector-j-9.4.0.jar" *.java  
 java -cp ".;path_to_jar_file\mysql-connector-j-9.4.0.jar" Main.java
 
 Or run directly from VS Code (ensure the .jar is linked in your classpath).

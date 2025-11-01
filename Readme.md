@@ -63,30 +63,30 @@ Log in as root:
 
 mysql -u root -p
 
-Create the database:
+Create the database:  
 
-CREATE DATABASE parkingdb;
+CREATE DATABASE parkingdb;  
 USE parkingdb;
 
-Create a dedicated user for this project:
+Create a dedicated user for this project:  
 
-CREATE USER 'parking_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-GRANT ALL PRIVILEGES ON parkingdb.* TO 'parking_user'@'localhost';
+CREATE USER 'parking_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';  
+GRANT ALL PRIVILEGES ON parkingdb.* TO 'parking_user'@'localhost';  
 FLUSH PRIVILEGES;
 
-🧱 3. Create Required Table(s)
+🧱 3. Create Required Table(s)  
 
-Run this inside MySQL:
+Run this inside MySQL:  
 
-CREATE TABLE parking_records (
-    record_id INT AUTO_INCREMENT PRIMARY KEY,
-    owner_name VARCHAR(100) NOT NULL,
-    vehicle_number VARCHAR(50) NOT NULL,
-    slot_number INT NOT NULL,
-    entry_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    exit_time TIMESTAMP NULL,
-    fee DECIMAL(10,2) DEFAULT 0.00
-);
+CREATE TABLE parking_records (  
+    record_id INT AUTO_INCREMENT PRIMARY KEY,    
+    owner_name VARCHAR(100) NOT NULL,    
+    vehicle_number VARCHAR(50) NOT NULL,  
+    slot_number INT NOT NULL,  
+    entry_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
+    exit_time TIMESTAMP NULL,  
+    fee DECIMAL(10,2) DEFAULT 0.00  
+);  
 
 🔗 4. Add MySQL Connector (JDBC Driver)
 
